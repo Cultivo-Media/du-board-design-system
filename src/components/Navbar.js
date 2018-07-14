@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import { colors } from '../variables';
 
+/**
+ * Navbar
+ *
+ * Styled Component
+ *
+ * A component that wraps styles that are used within the navbar to display the header, images, and
+ *  search bar correctly.
+ */
 const Navbar = styled.div`
   padding: 40px 0;
   h4 {

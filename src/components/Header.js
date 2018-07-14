@@ -5,6 +5,14 @@ import Container from './Container';
 
 import { colors } from '../variables';
 
+/**
+ * StyledHeader
+ *
+ * Styled Component
+ *
+ * A wrapper styled component for the header to ensure that content is displayed nicely and
+ *  aligned inside.
+ */
 const StyledHeader = styled.div`
   background-color: ${colors.darkGray};
   border-radius: 8px;
@@ -28,6 +36,17 @@ const StyledHeader = styled.div`
   }
 `;
 
+/**
+ * Header
+ *
+ * component
+ *
+ * A header component to be used on pages to display content (usually at the top). This is useful
+ *  for page names or to get the user's attention about some text or content.
+ *
+ * @param {string} title - A string of the title to display inside of the header.
+ * @param {string} description - A string of the description to display inside of the header.
+ */
 const Header = ({ title, description }) => (
   <Container>
     <StyledHeader>
@@ -37,11 +56,13 @@ const Header = ({ title, description }) => (
   </Container>
 );
 
+// Config propTypes
 Header.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
 };
 
+// Config defaultProps
 Header.defaultProps = {
   title: '',
   description: '',

@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import { colors } from '../variables';
 
+/**
+ * Button
+ *
+ * Styled Component
+ *
+ * A UI button that displays either a primary or secondary state based off of params passed in
+ *  through props.
+ */
 export default styled.button`
   background-color: ${props => props.primary ? colors.blue : 'transparent'};
   border: none;

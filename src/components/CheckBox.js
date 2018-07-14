@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { colors } from '../variables';
 
+/**
+ * StyledCheckbox
+ *
+ * Styled Component
+ *
+ * A div that looks like a checked (or unchecked) checkbox to show an truthy and falsey state.
+ */
 export const StyledCheckbox = styled.div`
   align-items: center;
   background-color: ${props => props.active ? colors.blue : colors.gray};
@@ -33,10 +40,12 @@ const MappedCheckbox = ({ isActive }) => (
   </StyledCheckbox>
 );
 
+// Config propTypes
 MappedCheckbox.propTypes = {
   isActive: PropTypes.bool,
 };
 
+// Config defaultProps
 MappedCheckbox.defaultProps = {
   isActive: false,
 };
