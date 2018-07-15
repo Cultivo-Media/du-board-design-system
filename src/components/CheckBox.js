@@ -1,7 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Check } from 'styled-icons/fa-solid';
+
 import { colors } from '../variables';
+
+/**
+ * WhiteCheckbox
+ *
+ * Styled Component
+ *
+ * A checkbox that is white to match the style defined below. It extends the font awesome checkbox.
+ */
+const WhiteCheckbox = Check.extend`
+  color: ${colors.white};
+`;
 
 /**
  * StyledCheckbox
@@ -20,6 +33,10 @@ export const StyledCheckbox = styled.div`
   height: 24px;
   justify-content: center;
   width: 24px;
+  svg {
+    width: 12px;
+    height: 12px;
+  }
 `;
 
 /**
@@ -31,23 +48,23 @@ export const StyledCheckbox = styled.div`
  *  This allows us to conditionally render a check inside of the circle if it is active vs if it is
  *  not active.
  *
- * @param {boolean} isActive - A boolean that determines whether or not the checkbox is currently
+ * @param {boolean} active - A boolean that determines whether or not the checkbox is currently
  *  checked.
  */
-const MappedCheckbox = ({ isActive }) => (
-  <StyledCheckbox active={isActive}>
-    {isActive && <i className="fa fa-check" />}
+const MappedCheckbox = ({ active }) => (
+  <StyledCheckbox active={active}>
+    {active && <WhiteCheckbox />}
   </StyledCheckbox>
 );
 
 // Config propTypes
 MappedCheckbox.propTypes = {
-  isActive: PropTypes.bool,
+  active: PropTypes.bool,
 };
 
 // Config defaultProps
 MappedCheckbox.defaultProps = {
-  isActive: false,
+  active: false,
 };
 
 export default MappedCheckbox;
