@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Check } from 'styled-icons/fa-solid';
+import { Check } from 'styled-icons/fa-solid/Check';
 
 import { colors } from '../variables';
 
