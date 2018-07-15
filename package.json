@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "build-storybook && gh-pages -d storybook-static"
   },
   "dependencies": {
     "prop-types": "15.6.2",
