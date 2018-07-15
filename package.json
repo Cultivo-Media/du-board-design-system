@@ -9,7 +9,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy": "build-storybook && gh-pages -d storybook-static",
-    "prepare": "rm -rf dist && babel src -d dist"
+    "postinstall": "babel src -d dist"
   },
   "dependencies": {
     "prop-types": "15.6.2",

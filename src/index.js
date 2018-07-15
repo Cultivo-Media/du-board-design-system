@@ -22,3 +22,6 @@ export { default as Navbar } from './components/Navbar';
 
 // Text
 export { SectionHeader, DefaultLabel } from './components/Text';
+
+// Export the variables so they can be used elsewhere
+export { colors, fontFamily } from './variables';
