@@ -1,14 +1,15 @@
 {
   "name": "du-board-design-system",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:hcjk/du-board-design-system.git",
   "author": "Henry Kaufman <hkaufman19@gmail.com>",
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "build-storybook && gh-pages -d storybook-static"
+    "deploy": "build-storybook && gh-pages -d storybook-static",
+    "prepublish": "rm -rf dist && babel src -d dist"
   },
   "dependencies": {
     "prop-types": "15.6.2",
@@ -23,6 +24,8 @@
     "@storybook/addons": "^3.4.8",
     "@storybook/react": "^3.4.8",
     "babel-core": "^6.26.3",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
     "babel-runtime": "^6.26.0"
   }
 }
