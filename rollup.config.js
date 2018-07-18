@@ -11,6 +11,7 @@ export default {
     exports: 'named',
     sourceMap: true,
   },
+  context: 'global',
   external: ['prop-types', 'react', 'react-dom', 'styled-components', 'styled-icons'],
   plugins: [
     resolve(),
