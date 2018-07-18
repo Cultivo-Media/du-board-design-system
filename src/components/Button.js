@@ -10,10 +10,10 @@ import { colors } from '../variables';
  *  through props.
  */
 export default styled.button`
-  background-color: ${props => props.primary ? colors.blue : 'transparent'};
+  background-color: ${({ primary }) => (primary ? colors.blue : 'transparent')};
   border: none;
   border-radius: 4px;
-  color: ${props => props.primary ? colors.white : colors.gray};
+  color: ${({ primary }) => (primary ? colors.white : colors.gray)};
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;

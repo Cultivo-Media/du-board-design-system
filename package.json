@@ -6,10 +6,14 @@
   "author": "Henry Kaufman <hkaufman19@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint src/**/*.{js,jsx}",
+    "lint:fix": "yarn lint --fix",
+    "lint:report": "yarn lint -f node_modules/eslint-detailed-reporter/lib/detailed.js -o coverage/eslint.html",
+    "format": "prettier --write 'src/**/*.{js,jsx}'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "deploy": "build-storybook && gh-pages -d storybook-static",
-    "postinstall": "rm -rf dist && rollup -c"
+    "storybook:build": "build-storybook",
+    "storybook:deploy": "build-storybook && gh-pages -d storybook-static",
+    "build": "rm -rf dist && rollup -c"
   },
   "dependencies": {
     "prop-types": "15.6.2",
@@ -26,6 +30,11 @@
     "@storybook/addons": "^3.4.8",
     "@storybook/react": "^3.4.8",
     "babel-plugin-external-helpers": "6.22.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "17.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
     "rollup": "0.62.0",
     "rollup-plugin-babel": "3.0.7",
     "rollup-plugin-commonjs": "9.1.3",

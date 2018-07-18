@@ -25,7 +25,7 @@ const WhiteCheckbox = Check.extend`
  */
 export const StyledCheckbox = styled.div`
   align-items: center;
-  background-color: ${props => props.active ? colors.blue : colors.gray};
+  background-color: ${({ active }) => (active ? colors.blue : colors.gray)};
   border-radius: 12px;
   color: ${colors.white};
   display: flex;

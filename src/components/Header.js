@@ -50,8 +50,12 @@ const StyledHeader = styled.div`
 const Header = ({ title, description }) => (
   <Container>
     <StyledHeader>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3>
+        {title}
+      </h3>
+      <p>
+        {description}
+      </p>
     </StyledHeader>
   </Container>
 );

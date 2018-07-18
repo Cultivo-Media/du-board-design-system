@@ -21,5 +21,5 @@ export const Grow = styled.div`
  */
 export const Flex = styled.div`
   display: flex;
-  align-items: ${props => props.center ? 'center' : 'flex-start'};
+  align-items: ${({ center }) => (center ? 'center' : 'flex-start')};
 `;
