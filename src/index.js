@@ -10,6 +10,8 @@ export { CardTableRowHead } from './components/CardTable';
 // Checkbox
 export { default as MappedCheckbox } from './components/CheckBox';
 
+export { default as Container } from './components/Container';
+
 // Flex
 export { Flex } from './components/Flex';
 export { Grow } from './components/Flex';
