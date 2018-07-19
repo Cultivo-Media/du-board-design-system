@@ -1,6 +1,6 @@
 {
   "name": "du-board-design-system",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "repository": "git@github.com:hcjk/du-board-design-system.git",
   "author": "Henry Kaufman <hkaufman19@gmail.com>",
