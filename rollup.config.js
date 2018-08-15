@@ -15,7 +15,10 @@ export default {
   external: ['prop-types', 'react', 'react-dom', 'styled-components', 'styled-icons'],
   plugins: [
     resolve(),
-    babel({ exclude: 'node_modules/**' }),
+    babel({
+      exclude: 'node_modules/**',
+      plugins: ['external-helpers'],
+    }),
     jsx({ factory: 'React.createElement' }),
     commonjs(),
   ],

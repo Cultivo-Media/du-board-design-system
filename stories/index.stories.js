@@ -89,6 +89,15 @@ storiesOf('Header', module)
         description="This is some dummy text that displays as the description of the header component."
       />
     </div>
+  ))
+  .add('Image Header', () => (
+    <div style={{ fontFamily: 'sans-serif' }}>
+      <Header
+        backgroundImage="https://images.unsplash.com/photo-1534201569625-ed4662d8be97?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1ff48aebbb7e08c289f8f738b5592f47&auto=format&fit=crop&w=2974&q=80"
+        title="Image Header"
+        description="This is some dummy text that displays as the description of the header component."
+      />
+    </div>
   ));
 
 // Text

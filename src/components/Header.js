@@ -6,6 +6,23 @@ import Container from './Container';
 import { colors } from '../variables';
 
 /**
+ * backgroundStyle()
+ *
+ * function
+ *
+ * A helper function for determining what the background looks like based off of if the background
+ *  has an image.
+ *
+ * @param {String} image - An optional image.
+ */
+const backgroundStyle = (image) => {
+  if (image) {
+    return `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`;
+  }
+  return colors.darkGray;
+};
+
+/**
  * StyledHeader
  *
  * Styled Component
@@ -14,7 +31,10 @@ import { colors } from '../variables';
  *  aligned inside.
  */
 const StyledHeader = styled.div`
-  background-color: ${colors.darkGray};
+  background: ${({ backgroundImage }) => backgroundStyle(backgroundImage)}};
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
   margin-bottom: 40px;
@@ -46,10 +66,11 @@ const StyledHeader = styled.div`
  *
  * @param {string} title - A string of the title to display inside of the header.
  * @param {string} description - A string of the description to display inside of the header.
+ * @param {string} backgroundImage - An optional image that can be used as the background iamge in the header.
  */
-const Header = ({ title, description }) => (
+const Header = ({ title, description, backgroundImage }) => (
   <Container>
-    <StyledHeader>
+    <StyledHeader backgroundImage={backgroundImage}>
       <h3>
         {title}
       </h3>
@@ -64,12 +85,14 @@ const Header = ({ title, description }) => (
 Header.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  backgroundImage: PropTypes.string,
 };
 
 // Config defaultProps
 Header.defaultProps = {
   title: '',
   description: '',
+  backgroundImage: null,
 };
 
 export default Header;
