@@ -98,6 +98,15 @@ storiesOf('Header', module)
         description="This is some dummy text that displays as the description of the header component."
       />
     </div>
+  ))
+  .add('Color Header', () => (
+    <div style={{ fontFamily: 'sans-serif' }}>
+      <Header
+        backgroundColor="red"
+        title="Image Header"
+        description="This is some dummy text that displays as the description of the header component."
+      />
+    </div>
   ));
 
 // Text

@@ -14,12 +14,14 @@ import { colors } from '../variables';
  *  has an image.
  *
  * @param {String} image - An optional image.
+ * @param {String} backgroundColor - An optional background color.
  */
-const backgroundStyle = (image) => {
+const backgroundStyle = (image, backgroundColor) => {
   if (image) {
     return `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${image})`;
   }
-  return colors.darkGray;
+  // If a background color exists, use that, otherwise use the dark gray color
+  return backgroundColor || colors.darkGray;
 };
 
 /**
@@ -31,7 +33,7 @@ const backgroundStyle = (image) => {
  *  aligned inside.
  */
 const StyledHeader = styled.div`
-  background: ${({ backgroundImage }) => backgroundStyle(backgroundImage)}};
+  background: ${({ backgroundImage, backgroundColor }) => backgroundStyle(backgroundImage, backgroundColor)}};
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,10 +69,16 @@ const StyledHeader = styled.div`
  * @param {string} title - A string of the title to display inside of the header.
  * @param {string} description - A string of the description to display inside of the header.
  * @param {string} backgroundImage - An optional image that can be used as the background iamge in the header.
+ * @param {string} backgroundColor - An optional background color that can be used as the background color for the header.
  */
-const Header = ({ title, description, backgroundImage }) => (
+const Header = ({
+  title,
+  description,
+  backgroundImage,
+  backgroundColor,
+}) => (
   <Container>
-    <StyledHeader backgroundImage={backgroundImage}>
+    <StyledHeader backgroundImage={backgroundImage} backgroundColor={backgroundColor}>
       <h3>
         {title}
       </h3>
@@ -86,6 +94,7 @@ Header.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   backgroundImage: PropTypes.string,
+  backgroundColor: PropTypes.string,
 };
 
 // Config defaultProps
@@ -93,6 +102,7 @@ Header.defaultProps = {
   title: '',
   description: '',
   backgroundImage: null,
+  backgroundColor: null,
 };
 
 export default Header;
