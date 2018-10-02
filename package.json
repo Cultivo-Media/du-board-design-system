@@ -14,7 +14,8 @@
     "storybook:build": "build-storybook",
     "storybook:deploy": "build-storybook && gh-pages -d storybook-static",
     "build": "rm -rf dist && rollup -c",
-    "postinstall": "postinstall-build dist"
+    "postinstall": "postinstall-build dist",
+    "test": "echo 'No tests yet'"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
