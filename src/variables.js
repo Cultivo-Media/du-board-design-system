@@ -1,11 +1,11 @@
 // Config colors
 export const colors = {
-  black: '#111',
+  black: '#2C2E35',
   darkGray: '#333',
-  gray: '#aaa',
+  gray: '#9FA0A3',
   snow: '#eee',
   white: '#fff',
-  blue: '#0D97D4',
+  blue: '#33A0D7',
 };
 
 // Config fontFamily
