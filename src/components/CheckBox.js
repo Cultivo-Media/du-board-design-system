@@ -13,7 +13,7 @@ import { colors } from '../variables';
  * A checkbox that is white to match the style defined below. It extends the font awesome checkbox.
  */
 const WhiteCheckbox = Check.extend`
-  color: ${colors.white};
+  color: ${({ theme }) => theme.white || colors.white};
 `;
 
 /**
@@ -25,9 +25,9 @@ const WhiteCheckbox = Check.extend`
  */
 export const StyledCheckbox = styled.div`
   align-items: center;
-  background-color: ${({ active }) => (active ? colors.blue : colors.gray)};
+  background-color: ${({ active, theme }) => (active ? (theme.blue || colors.blue) : (theme.gray || colors.gray))};
   border-radius: 12px;
-  color: ${colors.white};
+  color: ${({ theme }) => theme.white || colors.white};
   display: flex;
   font-size: 12px;
   height: 24px;

@@ -12,7 +12,7 @@ import { colors } from '../variables';
 const Navbar = styled.div`
   padding: 40px 0;
   h4 {
-    color: ${colors.black};
+    color: ${({ theme }) => theme.black || colors.black};
     font-size: 20px;
     font-weight: bold;
   }
@@ -20,10 +20,10 @@ const Navbar = styled.div`
     width: 40px;
   }
   input {
-    background-color: ${colors.snow};
+    background-color: ${({ theme }) => theme.snow || colors.snow};
     border: none;
     border-radius: 4px;
-    color: ${colors.black};
+    color: ${({ theme }) => theme.black || colors.black};
     font-size: 16px;
     padding: 8px;
     width: calc(100% - 16px);
@@ -32,10 +32,10 @@ const Navbar = styled.div`
     }
   }
   a {
-    color: ${colors.gray};
+    color: ${({ theme }) => theme.gray || colors.gray};
     text-decoration: none;
     &:hover {
-      color: ${colors.black};
+      color: ${({ theme }) => theme.black || colors.black};
     }
   }
 `;

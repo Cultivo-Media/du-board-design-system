@@ -44,13 +44,13 @@ const StyledHeader = styled.div`
   text-align: center;
   width: 100%;
   h3 {
-    color: ${colors.white};
+    color: ${({ theme }) => theme.white || colors.white};
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 16px;
   }
   p {
-    color: ${colors.white};
+    color: ${({ theme }) => theme.white || colors.white};
     margin: 0 auto;
     max-width: 480px;
     text-align: center;

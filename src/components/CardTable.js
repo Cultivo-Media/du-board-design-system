@@ -23,7 +23,7 @@ export const CardTableRow = styled.div`
   display: flex;
   padding: 16px 0;
   &:not(:last-child) {
-    border-bottom: solid 1px ${colors.snow};
+    border-bottom: solid 1px ${({ theme }) => theme.snow || colors.snow};
   }
 `;
 
@@ -35,7 +35,7 @@ export const CardTableRow = styled.div`
  * A subtitle for the card table row that is displayed with a lighter font color.
  */
 export const CardTableRowSub = styled.div`
-  color: ${colors.gray};
+  color: ${({ theme }) => theme.gray || colors.gray};
 `;
 
 /**
@@ -47,6 +47,6 @@ export const CardTableRowSub = styled.div`
  *  aligned to the right to match the indentation.
  */
 export const CardTableRowHead = styled.div`
-  color: ${colors.black};
+  color: ${({ theme }) => theme.black || colors.black};
   text-align: right;
 `;

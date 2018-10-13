@@ -9,7 +9,7 @@ import { colors } from '../variables';
  * Header text used for the top of a section for the sidebar select tool.
  */
 export const SectionHeader = styled.h5`
-  color: ${colors.gray};
+  color: ${({ theme }) => theme.gray || colors.gray};
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -24,7 +24,7 @@ export const SectionHeader = styled.h5`
  * A label that is used next to the checkboxes inside of modals.
  */
 export const DefaultLabel = styled.span`
-  color: ${colors.darkGray} !important;
+  color: ${({ theme }) => theme.darkGray || colors.darkGray} !important;
   font-size: 16px !important;
   margin-left: 8px;
 `;
